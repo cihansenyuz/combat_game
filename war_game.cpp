@@ -1,16 +1,22 @@
 #include "target.h"
 #include "attacker.h"
 
-enum selectedUnit{
-    ZOOK, ATGUN, TANK
-}selection;
+#define INFANTRY_NAME "Infantry Squad"
+#define INFANTRY_DAMAGE 50
+#define INFANTRY_ARMOR 100
+#define ATGUN_NAME "Antitank Gun"
+#define ATGUN_DAMAGE 150
+#define ATGUN_ARMOR 150
+#define TANK_NAME "Tank"
+#define TANK_DAMAGE 200
+#define TANK_ARMOR 200
 
 Attacker* setAttacker(void);
 Target* setTarget(void);
 
 int main(void)
 {
-    srand(time(0));
+    srand(time(0));         //  to seed RNG
     cout << "0:Bazooka Squad\n1:Antitank Gun\n2:Tank\n" << endl;
     Attacker* attackerUnit = setAttacker();     // create an attacker object
     Target* targetUnit = setTarget();           // create a target object
@@ -40,16 +46,16 @@ Attacker* setAttacker(void)
     cout << "Select attacker unit: ";
     cin >> select;
     selection = (selectedUnit) select;
-    switch(selection)
+    switch((selectedUnit) select)
     {
-        case ZOOK:
-            return (new Attacker("Bazooka Squad", 50, 100));
+        case INFANTRY:
+            return (new Attacker(INFANTRY_NAME, INFANTRY_DAMAGE, INFANTRY_ARMOR, INFANTRY));
             break;
         case ATGUN:
-            return (new Attacker("Antitank Gun", 150, 150));
+            return (new Attacker(ATGUN_NAME, ATGUN_DAMAGE, ATGUN_ARMOR, ATGUN));
             break;
         case TANK:
-            return (new Attacker("Tank", 200, 200));
+            return (new Attacker(TANK_NAME, TANK_DAMAGE, TANK_ARMOR, TANK));
             break;
     }
     return NULL;
@@ -63,14 +69,14 @@ Target* setTarget(void)
     selection = (selectedUnit) select;
     switch(selection)
     {
-        case ZOOK:
-            return (new Target("Bazooka Squad", 50, 100));
+        case INFANTRY:
+            return (new Target(INFANTRY_NAME, INFANTRY_DAMAGE, INFANTRY_ARMOR, INFANTRY));
             break;
         case ATGUN:
-            return (new Target("Antitank Gun", 150, 150));
+            return (new Target(ATGUN_NAME, ATGUN_DAMAGE, ATGUN_ARMOR, ATGUN));
             break;
         case TANK:
-            return (new Target("Tank", 200, 200));
+            return (new Target(TANK_NAME, TANK_DAMAGE, TANK_ARMOR, TANK));
             break;
     }
     return NULL;

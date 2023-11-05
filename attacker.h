@@ -11,13 +11,15 @@ class Attacker : public Unit
 private:
     int attackCount = 0;
 public:
-    Attacker(string n, int d, int a){
+    Attacker(string n, int d, int a, selectedUnit s){
         name = n;
         damage = d;
         armor = a;
+        unitType = s;
     }
     void attack(Target*);
     int getShotCount(void);
+    float getTargetMultiplier(Target*);
 };
 
 #endif

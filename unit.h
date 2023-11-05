@@ -5,6 +5,10 @@
 
 using namespace std;
 
+enum selectedUnit{
+    INFANTRY, ATGUN, TANK
+}selection;
+
 class Unit
 {
 protected:
@@ -12,6 +16,7 @@ protected:
     int health = 100;
     int damage;
     int armor;
+    int unitType;
 public:
     Unit(){}
     Unit(string n, int d, int a){
@@ -21,6 +26,7 @@ public:
     }
     int getHealth(void);
     int getArmor(void);
+    int getUnitType(void);
     string getName(void);
 };
 
