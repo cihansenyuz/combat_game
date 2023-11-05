@@ -12,7 +12,3 @@ void Target::lowerHealth(int h)
     health -= h;
 }
 
-int Target::getHealth(void)
-{
-    return health;
-}

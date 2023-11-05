@@ -4,6 +4,7 @@
 #include <iostream>
 #include "unit.h"
 #include "target.h"
+#include <time.h>   // to create RNG for damage calculation
 
 class Attacker : public Unit
 {

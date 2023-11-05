@@ -1,6 +1,6 @@
 #include "unit.h"
 
-int Unit::getHeath(void)
+int Unit::getHealth(void)
 {
     return health;
 }

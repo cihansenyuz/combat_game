@@ -19,7 +19,7 @@ public:
         damage = d;
         armor = a;
     }
-    int getHeath(void);
+    int getHealth(void);
     int getArmor(void);
     string getName(void);
 };

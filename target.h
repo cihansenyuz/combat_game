@@ -14,7 +14,6 @@ public:
     }
     bool isDead(void);
     void lowerHealth(int);
-    int getHealth(void);
 };
 
 #endif

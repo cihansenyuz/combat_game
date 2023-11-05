@@ -10,20 +10,25 @@ Target* setTarget(void);
 
 int main(void)
 {
-    
+    srand(time(0));
     cout << "0:Bazooka Squad\n1:Antitank Gun\n2:Tank\n" << endl;
-    Attacker* attackerUnit = setAttacker();
-    Target* targetUnit = setTarget();
+    Attacker* attackerUnit = setAttacker();     // create an attacker object
+    Target* targetUnit = setTarget();           // create a target object
 
-    while(targetUnit->getHealth() > 0) // until target is dead
+    while(targetUnit->getHealth() > 0)          // until target is down, keep attacking
     {
         attackerUnit->attack(targetUnit);
-        for (long long int i=0; i<500000000; i++)
+        for (long long int i=0; i<500000000; i++)   // some delay
             ;
     }
 
+    /* print the result of the attack */
     cout << endl << attackerUnit->getName() << " killed the " << targetUnit->getName()
          << " in " << attackerUnit->getShotCount() << " shots...";
+
+    /* release allocated memories */
+    free(attackerUnit);
+    free(targetUnit);
 
     return 0;
 }
