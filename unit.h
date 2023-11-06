@@ -5,7 +5,7 @@
 
 using namespace std;
 
-enum selectedUnit{
+typedef enum selectedUnit{
     INFANTRY, ATGUN, TANK
 }selection;
 

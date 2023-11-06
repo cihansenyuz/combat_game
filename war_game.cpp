@@ -44,8 +44,8 @@ Attacker* setAttacker(void)
     int select;
     cout << "Select attacker unit: ";
     cin >> select;
-    selection = (selectedUnit) select;
-    switch((selectedUnit) select)
+    selection userSelection = (selectedUnit) select;
+    switch(userSelection)
     {
         case INFANTRY:
             return (new Attacker(INFANTRY_NAME, INFANTRY_DAMAGE, INFANTRY_ARMOR, INFANTRY));
@@ -65,8 +65,8 @@ Target* setTarget(void)
     int select;
     cout << "Select target unit: ";
     cin >> select;
-    selection = (selectedUnit) select;
-    switch(selection)
+    selection userSelection = (selectedUnit) select;
+    switch(userSelection)
     {
         case INFANTRY:
             return (new Target(INFANTRY_NAME, INFANTRY_DAMAGE, INFANTRY_ARMOR, INFANTRY));
