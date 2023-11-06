@@ -1,4 +1,3 @@
-#include "target.h"
 #include "attacker.h"
 
 #define INFANTRY_NAME "Infantry Squad"

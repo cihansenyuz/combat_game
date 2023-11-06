@@ -2,7 +2,6 @@
 #define ATTACKER_H
 
 #include <iostream>
-#include "unit.h"
 #include "target.h"
 #include <time.h>   // to create RNG for damage calculation
 
