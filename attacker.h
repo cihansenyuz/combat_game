@@ -1,5 +1,5 @@
-#ifndef ATTACKER
-#define ATTACKER
+#ifndef ATTACKER_H
+#define ATTACKER_H
 
 #include <iostream>
 #include "unit.h"

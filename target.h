@@ -1,5 +1,5 @@
-#ifndef TARGET
-#define TARGET
+#ifndef TARGET_H
+#define TARGET_H
 
 #include <iostream>
 #include "unit.h"

@@ -1,5 +1,5 @@
-#ifndef UNIT
-#define UNIT
+#ifndef UNIT_H
+#define UNIT_H
 
 #include <iostream>
 
