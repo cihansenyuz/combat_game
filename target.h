@@ -13,8 +13,7 @@ public:
         armor = a;
         unitType = s;
     }
-    bool isDead(void);
-    void lowerHealth(int);
+    void counterAttack(Unit*);
 };
 
 #endif
