@@ -2,8 +2,10 @@
 #define ATTACKER_H
 
 #include <iostream>
-#include "target.h"
+#include "unit.h"
 #include <time.h>   // to create RNG for damage calculation
+
+#define ATTACK_BONUS 1.3
 
 class Attacker : public Unit
 {
@@ -16,9 +18,9 @@ public:
         armor = a;
         unitType = s;
     }
-    void attack(Target*);
+    void attack(Unit*);
     int getShotCount(void);
-    float getTargetMultiplier(Target*);
+    
 };
 
 #endif

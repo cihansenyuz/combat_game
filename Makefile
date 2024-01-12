@@ -14,7 +14,7 @@ target.o: target.cpp target.h
 attecker.o: attacker.cpp attacker.h
 	g++ -c attacker.cpp
 	
-all: unit.o target.o attacker.o 
+all: unit.o attacker.o target.o
 	g++ war_game.cpp -o war_game attacker.o target.o unit.o
 	
 clean:
